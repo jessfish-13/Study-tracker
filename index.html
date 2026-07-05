@@ -1,330 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>The Archive</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Hubballi&family=Kanit:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>The Archive</title>
 
-<style>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-:root{
-    --bg:#faf8f4;
-    --card:#f2ede6;
-    --border:#d8d4cc;
-    --slate:#64748b;
-    --text:#374151;
-    --muted:#7b8794;
-}
+    <link href="https://fonts.googleapis.com/css2?family=Hubballi&family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="style.css">
 
-body{
-    background:var(--bg);
-    color:var(--text);
-    font-family:'Kanit',sans-serif;
-    min-height:100vh;
-}
-
-.container{
-    max-width:1000px;
-    margin:auto;
-    padding:50px 25px;
-}
-
-.hero{
-    background:var(--card);
-    border:1px solid var(--border);
-    border-radius:28px;
-    padding:45px;
-    margin-bottom:35px;
-}
-
-.hero h1{
-    font-family:'Hubballi',cursive;
-    font-size:5rem;
-    color:var(--slate);
-    line-height:1;
-}
-
-.hero p{
-    margin-top:15px;
-    color:var(--muted);
-    max-width:600px;
-}
-
-.section-title{
-    color:var(--slate);
-    margin-bottom:15px;
-    font-size:1.1rem;
-    font-weight:500;
-}
-
-.card{
-    background:white;
-    border:1px solid var(--border);
-    border-radius:24px;
-    padding:25px;
-    margin-bottom:20px;
-}
-
-.month-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin-bottom:20px;
-}
-
-.month-name{
-    font-size:1.7rem;
-    color:var(--slate);
-    font-weight:500;
-}
-
-.entry{
-    padding:12px;
-    border-left:3px solid var(--slate);
-    margin-bottom:10px;
-    background:#fcfbf8;
-    border-radius:0 12px 12px 0;
-}
-
-.entry-type{
-    font-size:.75rem;
-    text-transform:uppercase;
-    letter-spacing:1px;
-    color:var(--muted);
-}
-
-.entry-text{
-    margin-top:5px;
-}
-
-.form{
-    display:grid;
-    gap:10px;
-    margin-bottom:30px;
-}
-
-select,
-textarea,
-button{
-    font-family:'Kanit',sans-serif;
-}
-
-select,
-textarea{
-    border:1px solid var(--border);
-    border-radius:14px;
-    padding:12px;
-    background:white;
-}
-
-textarea{
-    resize:none;
-    height:90px;
-}
-
-button{
-    border:none;
-    background:var(--slate);
-    color:white;
-    padding:12px;
-    border-radius:14px;
-    cursor:pointer;
-    transition:.2s;
-}
-
-button:hover{
-    opacity:.9;
-}
-
-.timeline{
-    position:relative;
-}
-
-.timeline::before{
-    content:"";
-    position:absolute;
-    left:15px;
-    top:0;
-    bottom:0;
-    width:2px;
-    background:var(--border);
-}
-
-.month{
-    position:relative;
-    margin-left:35px;
-}
-
-.month::before{
-    content:"";
-    position:absolute;
-    left:-28px;
-    top:25px;
-    width:12px;
-    height:12px;
-    border-radius:50%;
-    background:var(--slate);
-}
-
-.empty{
-    color:var(--muted);
-    font-style:italic;
-}
-
-.footer{
-    text-align:center;
-    margin-top:40px;
-    color:var(--muted);
-    font-size:.9rem;
-}
-
-@media(max-width:700px){
-
-.hero h1{
-    font-size:3.5rem;
-}
-
-.month-header{
-    flex-direction:column;
-    align-items:flex-start;
-}
-
-}
-
-</style>
 </head>
+
 <body>
 
-<div class="container">
+    <main class="homepage">
 
-<div class="hero">
-    <h1>The Archive</h1>
-    <p>
-        A collection of moments, achievements, memories,
-        funny quotes, and things worth remembering.
-    </p>
-</div>
+        <!-- ===============================
+             COVER
+        ================================ -->
 
-<div class="card">
+        <section class="cover">
 
-    <div class="section-title">Add an Entry</div>
+            <h1 class="logo">
+                The Archive
+            </h1>
 
-    <div class="form">
+            <div class="date-area">
 
-        <select id="type">
-            <option>Achievement</option>
-            <option>Memory</option>
-            <option>Quote</option>
-            <option>Reflection</option>
-            <option>Favorite</option>
-        </select>
+                <p id="weekday" class="weekday">
+                    Sunday
+                </p>
 
-        <textarea id="text"
-        placeholder="Write something worth remembering..."></textarea>
+                <p id="date" class="date">
+                    July 5, 2026
+                </p>
 
-        <button onclick="addEntry()">
-            Add to June 2026
-        </button>
+            </div>
+
+            <blockquote class="quote">
+
+                “The days are long,
+                <br>
+                but the years are short.”
+
+            </blockquote>
+
+            <button
+                id="continueButton"
+                class="continue-button">
+
+                Continue
+
+            </button>
+
+        </section>
+
+
+
+        <!-- ===============================
+             TABLE OF CONTENTS
+        ================================ -->
+
+        <section class="contents">
+
+            <div class="contents-header">
+
+                <h2>
+                    2026
+                </h2>
+
+                <p>
+                    Contents
+                </p>
+
+            </div>
+
+            <div
+                id="chapterContainer"
+                class="chapter-container">
+
+                <!-- JavaScript inserts months here -->
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ===============================
+         PAGE TRANSITION
+    ================================ -->
+
+    <div
+        id="pageFade"
+        class="page-fade">
 
     </div>
 
-</div>
 
-<div class="timeline">
+    <!-- ===============================
+         MAIN SCRIPT
+    ================================ -->
 
-<div class="month card">
-
-<div class="month-header">
-    <div class="month-name">June 2026</div>
-</div>
-
-<div id="entries"></div>
-
-</div>
-
-</div>
-
-<div class="footer">
-    The small things are usually the things you'll forget first.
-</div>
-
-</div>
-
-<script>
-
-let entries =
-JSON.parse(localStorage.getItem("archiveEntries")) || [];
-
-function render(){
-
-const container =
-document.getElementById("entries");
-
-container.innerHTML="";
-
-if(entries.length===0){
-
-container.innerHTML=
-'<div class="empty">No entries yet.</div>';
-
-return;
-}
-
-entries.forEach(item=>{
-
-const div=document.createElement("div");
-
-div.className="entry";
-
-div.innerHTML=`
-<div class="entry-type">${item.type}</div>
-<div class="entry-text">${item.text}</div>
-`;
-
-container.appendChild(div);
-
-});
-
-}
-
-function addEntry(){
-
-const type=
-document.getElementById("type").value;
-
-const text=
-document.getElementById("text").value.trim();
-
-if(!text) return;
-
-entries.unshift({
-type,
-text
-});
-
-localStorage.setItem(
-"archiveEntries",
-JSON.stringify(entries)
-);
-
-document.getElementById("text").value="";
-
-render();
-
-}
-
-render();
-
-</script>
+    <script src="script.js"></script>
 
 </body>
+
 </html>
