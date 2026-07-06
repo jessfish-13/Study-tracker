@@ -76,23 +76,6 @@ body {
     max-width: 500px;
 }
 
-/* Button */
-.continue-button {
-    background: var(--accent);
-    color: white;
-    border: none;
-    padding: 12px 28px;
-    border-radius: 12px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: all 0.2s ease;
-}
-
-.continue-button:hover {
-    opacity: 0.9;
-    transform: translateY(-1px);
-}
-
 /* ===============================
    Contents Section
 ================================= */
