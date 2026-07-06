@@ -35,19 +35,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // ===============================
-    // Continue button
-    // ===============================
-
-    const continueButton = document.getElementById("continueButton");
-
-    continueButton.textContent = `Continue to ${months[monthIndex]}`;
-
-    continueButton.addEventListener("click", () => {
-        // Placeholder transition (we'll upgrade this in Milestone 2)
-        window.location.href = `chapter.html?month=${monthIndex}`;
-    });
-
-    // ===============================
     // Generate chapter list
     // ===============================
 
