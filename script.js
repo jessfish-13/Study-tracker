@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     continueButton.addEventListener("click", () => {
         // Placeholder transition (we'll upgrade this in Milestone 2)
-        alert(`Opening ${months[monthIndex]} ${year}`);
+        window.location.href = `chapter.html?month=${month}`;
     });
 
     // ===============================
