@@ -1,18 +1,21 @@
-/* ======================================
-   The Archive
-   Chapter Page Styles
-====================================== */
+/* ======================================================
+   THE ARCHIVE
+   Chapter Styles
+   Version 0.3
+====================================================== */
 
 :root{
-    --background:#faf8f4;
-    --surface:#f2ede6;
-    --border:#d9d5cd;
 
-    --text:#374151;
-    --muted:#8a8f98;
-    --accent:#64748b;
+    --background:#faf8f4;
+    --surface:#f5f1ea;
+    --border:#e2ddd4;
+
+    --text:#445061;
+    --muted:#7f8894;
+    --accent:#66758b;
 
     --radius:18px;
+
 }
 
 *{
@@ -22,50 +25,58 @@
 }
 
 body{
+
     background:var(--background);
+
     color:var(--text);
+
     font-family:"Kanit",sans-serif;
-    line-height:1.6;
+
+    line-height:1.75;
+
 }
 
 .page{
+
     max-width:850px;
+
     margin:auto;
-    padding:60px 24px 100px;
+
+    padding:60px 28px 100px;
+
 }
 
-/* ===========================
+/* =======================
    Back Link
-=========================== */
+======================= */
 
 .back-link{
 
-    display:inline-block;
+    text-decoration:none;
 
     color:var(--accent);
 
-    text-decoration:none;
-
-    margin-bottom:45px;
+    font-size:.95rem;
 
     transition:.2s;
+
 }
 
 .back-link:hover{
 
-    opacity:.7;
+    opacity:.65;
 
 }
 
-/* ===========================
+/* =======================
    Cover
-=========================== */
+======================= */
 
 .cover{
 
     text-align:center;
 
-    margin-bottom:60px;
+    margin:60px 0;
 
 }
 
@@ -73,11 +84,11 @@ body{
 
     color:var(--muted);
 
-    letter-spacing:2px;
-
     text-transform:uppercase;
 
-    font-size:.8rem;
+    letter-spacing:2px;
+
+    font-size:.78rem;
 
 }
 
@@ -85,11 +96,11 @@ body{
 
     font-family:"Hubballi",sans-serif;
 
-    font-size:4.5rem;
+    font-size:4.8rem;
 
     color:var(--accent);
 
-    margin-top:10px;
+    margin-top:12px;
 
 }
 
@@ -105,47 +116,50 @@ body{
 
     width:100%;
 
-    max-width:600px;
+    max-width:620px;
 
-    min-height:120px;
+    min-height:140px;
 
     margin:auto;
 
-    display:block;
+    padding:22px;
 
-    background:white;
-
-    border:1px solid var(--border);
+    border:none;
 
     border-radius:var(--radius);
 
-    padding:18px;
+    background:var(--surface);
+
+    color:var(--text);
 
     resize:vertical;
 
     font-family:inherit;
 
-    font-size:.95rem;
+    font-size:.97rem;
 
 }
 
-/* ===========================
+.cover-text:focus{
+
+    outline:none;
+
+}
+
+/* =======================
    Sections
-=========================== */
+======================= */
 
 .new-entry,
-.search,
-.timeline{
+.search{
 
-    background:white;
-
-    border:1px solid var(--border);
+    background:var(--surface);
 
     border-radius:22px;
 
     padding:28px;
 
-    margin-bottom:28px;
+    margin-bottom:35px;
 
 }
 
@@ -153,53 +167,51 @@ body{
 
     color:var(--accent);
 
-    margin-bottom:18px;
-
     font-weight:500;
+
+    margin-bottom:18px;
 
 }
 
-/* ===========================
+/* =======================
    Inputs
-=========================== */
+======================= */
 
 input,
-select,
-textarea{
+textarea,
+select{
 
     width:100%;
 
+    padding:15px;
+
     margin-bottom:15px;
 
-    padding:14px;
+    border:none;
 
     border-radius:14px;
 
-    border:1px solid var(--border);
+    background:white;
 
-    background:#fff;
+    color:var(--text);
 
     font-family:inherit;
 
     font-size:.95rem;
 
-    transition:.2s;
-
 }
 
 input:focus,
-select:focus,
-textarea:focus{
+textarea:focus,
+select:focus{
 
     outline:none;
 
-    border-color:var(--accent);
-
 }
 
-/* ===========================
+/* =======================
    Button
-=========================== */
+======================= */
 
 button{
 
@@ -209,9 +221,9 @@ button{
 
     border:none;
 
-    padding:14px 22px;
-
     border-radius:14px;
+
+    padding:13px 24px;
 
     cursor:pointer;
 
@@ -225,43 +237,141 @@ button:hover{
 
     transform:translateY(-1px);
 
-    opacity:.92;
-
 }
 
-/* ===========================
-   Timeline Placeholder
-=========================== */
+/* =======================
+   Timeline
+======================= */
 
 .timeline{
 
-    min-height:250px;
+    margin-top:55px;
 
 }
 
-.timeline::before{
+/* Empty message */
 
-    content:"No entries yet.";
-
-    color:var(--muted);
-
-    display:block;
+.timeline p{
 
     text-align:center;
 
-    padding-top:100px;
+    color:var(--muted);
+
+    padding:60px 0;
 
 }
 
-/* ===========================
+/* =======================
+   Entry
+======================= */
+
+.entry{
+
+    padding:28px 0;
+
+    border-top:1px solid var(--border);
+
+    animation:fade .35s ease;
+
+}
+
+.entry:first-child{
+
+    border-top:none;
+
+}
+
+.entry-category{
+
+    color:var(--accent);
+
+    font-size:.8rem;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+
+}
+
+.entry-title{
+
+    font-size:1.35rem;
+
+    margin:6px 0;
+
+    font-weight:500;
+
+}
+
+.entry-date{
+
+    color:var(--muted);
+
+    font-size:.82rem;
+
+    margin-bottom:18px;
+
+}
+
+.entry-text{
+
+    white-space:pre-wrap;
+
+}
+
+.entry-actions{
+
+    margin-top:24px;
+
+    display:flex;
+
+    gap:10px;
+
+}
+
+.entry-actions button{
+
+    background:transparent;
+
+    color:var(--accent);
+
+    padding:0;
+
+}
+
+/* =======================
+   Animation
+======================= */
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(8px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* =======================
    Mobile
-=========================== */
+======================= */
 
 @media(max-width:700px){
 
     #monthTitle{
 
-        font-size:3.5rem;
+        font-size:3.8rem;
 
     }
 
