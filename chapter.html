@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>The Archive</title>
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Hubballi&family=Kanit:wght@300;400;500;600&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="chapter.css">
+
+</head>
+
+<body>
+
+<main class="page">
+
+    <!-- ========================= -->
+    <!-- Back -->
+    <!-- ========================= -->
+
+    <a href="index.html"
+       class="back-link">
+
+        ← Back to Contents
+
+    </a>
+
+
+    <!-- ========================= -->
+    <!-- Chapter Cover -->
+    <!-- ========================= -->
+
+    <section class="cover">
+
+        <p id="chapterNumber"
+           class="chapter-number">
+
+            Chapter VII
+
+        </p>
+
+        <h1 id="monthTitle">
+
+            July
+
+        </h1>
+
+        <p id="year">
+
+            2026
+
+        </p>
+
+        <textarea
+            id="coverText"
+            class="cover-text"
+            placeholder="Write a short paragraph about this month..."></textarea>
+
+    </section>
+
+
+
+    <!-- ========================= -->
+    <!-- New Entry -->
+    <!-- ========================= -->
+
+    <section class="new-entry">
+
+        <h2>
+
+            New Entry
+
+        </h2>
+
+        <input
+            id="entryTitle"
+            type="text"
+            placeholder="Title">
+
+        <select id="entryCategory">
+
+            <option>Memory</option>
+
+            <option>Achievement</option>
+
+            <option>Reflection</option>
+
+            <option>Quote</option>
+
+            <option>Favorite</option>
+
+        </select>
+
+        <textarea
+            id="entryText"
+            placeholder="Write something worth remembering..."></textarea>
+
+        <button id="saveEntry">
+
+            Save Entry
+
+        </button>
+
+    </section>
+
+
+
+    <!-- ========================= -->
+    <!-- Search -->
+    <!-- ========================= -->
+
+    <section class="search">
+
+        <input
+            id="searchBox"
+            type="text"
+            placeholder="Search entries...">
+
+    </section>
+
+
+
+    <!-- ========================= -->
+    <!-- Timeline -->
+    <!-- ========================= -->
+
+    <section
+        id="timeline"
+        class="timeline">
+
+        <!-- Entries appear here -->
+
+    </section>
+
+</main>
+
+
+<script src="chapter.js"></script>
+
+</body>
+
+</html>
