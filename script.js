@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     continueButton.addEventListener("click", () => {
         // Placeholder transition (we'll upgrade this in Milestone 2)
-        window.location.href = `chapter.html?month=${month}`;
+        window.location.href = `chapter.html?month=${monthIndex}`;
     });
 
     // ===============================
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Click behavior (temporary)
         chapter.addEventListener("click", () => {
-            alert(`Opening ${month} ${year}`);
+            window.location.href = `chapter.html?month=${encodeURIComponent(month)}`;
         });
 
         chapterContainer.appendChild(chapter);
